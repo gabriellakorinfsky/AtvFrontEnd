@@ -1,0 +1,32 @@
+.body{
+    padding: 0px 20px;
+    margin: 5px 60px;
+}
+.alunos{
+    line-height: 5px;
+}
+
+p{
+    margin-left: 20px;
+}
+
+h4{
+    margin-left: 10px;
+}
+
+.text{
+    margin: 15px 20px;
+}
+
+.selecionar{
+    display: flex;
+}
+
+.selecione{
+    margin-top: 20px;
+    width: 10%;
+    height: 15%;
+    padding: 5px;
+    border: 2px solid rgb(0, 11, 128);
+    border-radius: 20px;
+}

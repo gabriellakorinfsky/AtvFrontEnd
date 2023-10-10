@@ -1,0 +1,64 @@
+<div class="body">
+    <div class="alunos">
+        <h3>Alunos e Matrícula</h3>
+        <p>Filipe Alexandre Bulhões Gomes Pontes - 01435394</p>
+        <p>Gabriella Lacerda Chaves Korinfsky - 01511663</p> 
+        <p>Geovanna Thereza T. da Silva - 01523550</p>
+        <p>José Hugo Chaves Filho - 01512676</p> 
+    </div>
+
+    <h3>1. Faça uma interpolação do ts. para o .html da frase: "Olá mundo".</h3>
+    <p>{{ mensagem }}</p>
+
+    <h3>2. Faça uma interpolação do ts. para o .html numa âncora e coloque o link da âncora numa variável no 
+        .ts e interpole isso no atributo href.</h3>
+
+        <a [href]="linkDaAncora">Clique aqui</a>
+
+
+    <h3>3. Crie um event binding que:</h3>
+    <h4>a) Espera um clique em um paragrafo</h4>
+    <h4>b) Quando o parágrafo for clicado, mudará a cor do background e a cor da fonte.</h4>
+
+
+<article>
+      <p [style.background]="fundo" [style.color]="cor" (click)="getCor()"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. In varius fringilla pharetra.
+        Morbi congue arcu orci, et iaculis lectus vulputate id. Morbi congue id lorem eu
+        volutpat. Maecenas in est lacinia, sollicitudin diam non, ultrices diam. Sed sollicitudin
+        purus eget imperdiet porta. Pellentesque vestibulum massa est, in imperdiet mi mattis
+        in. Maecenas quam dui, sagittis ac nulla in, egestas suscipit metus. Aliquam
+        fringilla consectetur erat, vitae posuere purus cursus nec. </p>
+
+
+</article>
+  
+
+
+    <h3>4. Crie um event binding que, usando um select-option, mostre e suma com o elemento em tela com 4 textos 
+        diferentes, cada um só pode aparecer quando for escolhido sua respectiva opção no seletor select.</h3>
+    <div class="selecionar">
+        <select class="selecione" [(ngModel)]="selectText">
+            <option value="text1">Texto1</option>
+            <option value="text2">Texto2</option>
+            <option value="text3">Texto3</option>
+            <option value="text4">Texto4</option>
+        </select>
+
+        <div class="text" *ngIf="selectText === 'text1'">
+            Em um template HTML no Angular existem alguns recursos que são importantes no decorrer de um projeto. 
+            A Interpolação nada mais é do que um recurso de ‘embedar’ expressões dentro de uma área delimitada por chaves.
+        </div>
+        <div class="text" *ngIf="selectText === 'text2'">
+            Property binding em Angular é uma técnica que conecta propriedades de elementos HTML a variáveis no componente, permitindo a atualização dinâmica 
+            das propriedades com base em alterações no componente. Isso é feito usando a sintaxe de colchetes, como por exemplo: [propriedade]="variavel".
+        </div>
+        <div class="text" *ngIf="selectText === 'text3'">
+            O event binding em Angular é uma técnica que permite associar eventos do lado do usuário, como cliques ou teclas pressionadas, a métodos ou expressões
+            no componente, possibilitando interatividade dinâmica na aplicação.
+        </div>
+        <div class="text" *ngIf="selectText === 'text4'">
+            O two-way binding no Angular permite a sincronização automática entre a interface do usuário e o modelo 
+            de dados, facilitando a atualização bidirecional de valores em tempo real.
+        </div>
+    </div>
+</div>
